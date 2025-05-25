@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	sliceTest := []string{"Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday"}
+
+	sliceTest = append(sliceTest, "Sunday")
+
+	day := 0
+
+	fmt.Println("Put in a number between 1 and 7 to check which weekday it is.")
+
+	
+
+	for {
+		fmt.Scan(&day)
+
+		if day > 0 && day < 8 {
+
+			fmt.Println("It is " + sliceTest[day-1])
+			break
+
+		} else {
+			fmt.Println("Wrong Input, try again")
+		}
+
+	}
+
+}
